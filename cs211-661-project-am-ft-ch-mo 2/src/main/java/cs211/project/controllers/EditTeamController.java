@@ -19,7 +19,7 @@ public class EditTeamController {
     @FXML private Label usernameLabel;
     @FXML private Label activityNameLabel;
     @FXML private Label detailLabel;
-    @FXML private Button deleteBtn;
+    @FXML private Label activityLabel;
     @FXML private TableView commentTableView;
     @FXML private TextField yourCommentTextField;
     private Datasource<UserList> userListDatasource;
@@ -44,6 +44,7 @@ public class EditTeamController {
     public void initialize() {
         usernameLabel.setText("");
         activityNameLabel.setText("");
+        activityLabel.setText("");
         detailLabel.setText("");
 
         currTeam = (TeamUser) FXRouter.getData(); //ชื่ออีเว้นกับทีม
@@ -83,6 +84,7 @@ public class EditTeamController {
                 if (newValue != null) {
                     currentActivity = newValue.getActivityName();
                     activityNameLabel.setText(newValue.getActivityName());
+                    activityLabel.setText(newValue.getActivityName());
                     detailLabel.setText(newValue.getActivityDetail());
                     showCommentTable(teamCommentList);
                 }
@@ -180,6 +182,7 @@ public class EditTeamController {
             System.out.println("-------------------");
             teamCommentListDatasource.writeData(commentList);
             yourCommentTextField.setText("");
+            showCommentTable(teamCommentListDatasource.readData());
 
         }
     }

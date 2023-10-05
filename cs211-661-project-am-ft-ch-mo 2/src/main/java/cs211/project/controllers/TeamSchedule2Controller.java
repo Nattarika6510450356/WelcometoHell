@@ -17,7 +17,7 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 
-public class TeamScheduleController {
+public class TeamSchedule2Controller {
 
     @FXML
     private TableView teamActivityTableView;
@@ -153,9 +153,8 @@ public class TeamScheduleController {
 
     @FXML
     private void onBackBtnClick() {
-        EventUser eventUser = new EventUser(eventName, currentUser);
         try {
-            FXRouter.goTo("event-detail", eventUser);
+            FXRouter.goTo("joined-event", current.getUserName());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

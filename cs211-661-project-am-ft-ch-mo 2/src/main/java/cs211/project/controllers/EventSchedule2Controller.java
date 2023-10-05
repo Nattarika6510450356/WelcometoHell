@@ -13,7 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class EventScheduleController {
+public class EventSchedule2Controller {
     @FXML private TableView scheduleTableView;
     private String eventName;
     private EventUser eventUser;
@@ -59,7 +59,7 @@ public class EventScheduleController {
         for(TimeSchedule timeSchedule: timeScheduleList.getTimeSchedules()){
             LocalDate finDate = LocalDate.parse(timeSchedule.getActivityFinish());
             if(finDate.isBefore(LocalDate.now())) {
-                    timeSchedule.setActivityStatus("finish");
+                timeSchedule.setActivityStatus("finish");
             }
             if (timeSchedule.getInTeam().equals("null") && timeSchedule.getScheduleInEvent().equals(eventName)) {
                 scheduleTableView.getItems().add(timeSchedule);
@@ -70,7 +70,7 @@ public class EventScheduleController {
     @FXML
     protected void backBtnClick() {
         try {
-            FXRouter.goTo("event-detail", eventUser);
+            FXRouter.goTo("joined-event", eventUser.getUser());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

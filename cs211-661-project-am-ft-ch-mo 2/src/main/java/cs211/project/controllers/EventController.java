@@ -26,6 +26,7 @@ import cs211.project.models.TeamList;
 import cs211.project.services.TeamListFileDatasource;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class EventController {
     @FXML
@@ -80,10 +81,16 @@ public class EventController {
         if (events.getAvailableSeat() == 0) {
             joinIndividualButton.setVisible(false);
             seatFullLabel.setText("Seat Full");
-        } else if (eventUserList.findEventUser(eventUser.getEvent(), currentUser) != null) {
+        }
+        if (eventUserList.findEventUser(eventUser.getEvent(), currentUser) != null) {
             joinIndividualButton.setVisible(false);
             scheduleButton.setVisible(true);
-
+        }
+        LocalDate finDate = LocalDate.parse(events.getFinishDate());
+        if (finDate.isBefore(LocalDate.now())) {
+            joinIndividualButton.setVisible(false);
+            scheduleButton.setVisible(false);
+            seatFullLabel.setText("Event Finished");
         }
 
         datasource1 = new TeamListFileDatasource("data", "team-list.csv");

@@ -48,7 +48,7 @@ public class JoinedEventController {
                         // FXRouter.goTo สามารถส่งข้อมูลไปยังหน้าที่ต้องการได้ โดยกำหนดเป็น parameter ที่สอง
 
                         EventUser eventUser = new EventUser(newValue.getEventName(), currentUser);
-                        FXRouter.goTo("event-schedule", eventUser);
+                        FXRouter.goTo("event-schedule2", eventUser);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -64,7 +64,7 @@ public class JoinedEventController {
                         // FXRouter.goTo สามารถส่งข้อมูลไปยังหน้าที่ต้องการได้ โดยกำหนดเป็น parameter ที่สอง
 
                         TeamUser teamUser = new TeamUser(newValue.getTeamInEvent(), newValue.getTeamName(), currentUser);
-                        FXRouter.goTo("team-table", teamUser);
+                        FXRouter.goTo("team-table2", teamUser);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }

@@ -9,6 +9,7 @@ import cs211.project.services.FXRouter;
 import cs211.project.services.TeamListFileDatasource;
 import cs211.project.services.TeamUserListFileDatasource;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
@@ -19,6 +20,8 @@ public class TeamController {
     @FXML private Label availableSeatLabel;
     @FXML private Label teamRegisOpenLabel;
     @FXML private Label teamRegisCloseLabel;
+    @FXML private Button joinButton;
+    @FXML private Label joinLabel;
     Team team;
     TeamList teamList;
     TeamUser teamUser;
@@ -32,6 +35,7 @@ public class TeamController {
 
     @FXML
     public void initialize(){
+        joinLabel.setVisible(false);
         datasource = new TeamListFileDatasource("data", "team-list.csv");
         teamUserListDatasource = new TeamUserListFileDatasource("data", "team-user-list.csv");
         teamUserList = teamUserListDatasource.readData();
@@ -42,6 +46,11 @@ public class TeamController {
         teamList = datasource.readData();
         team = teamList.findTeamByTeamName(teamName);
         showTeam(team);
+
+        if (teamUserList.findTeamUser(eventName, teamName, username) != null) {
+            joinButton.setVisible(false);
+            joinLabel.setVisible(true);
+        }
     }
     private void showTeam(Team team){
         teamNameLabel.setText(team.getTeamName());

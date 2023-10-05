@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.TeamController">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.TeamController">
    <children>
       <BorderPane prefHeight="770.0" prefWidth="1029.0" style="-fx-background-color: #171717;">
          <top>
@@ -64,7 +66,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="414.0" layoutY="557.0" mnemonicParsing="false" onAction="#onJoinTeamBtnClick" prefHeight="66.0" prefWidth="162.0" style="-fx-background-color: #ffc900;" text="Join Team">
+                  <Button fx:id="joinButton" layoutX="414.0" layoutY="557.0" mnemonicParsing="false" onAction="#onJoinTeamBtnClick" prefHeight="66.0" prefWidth="162.0" style="-fx-background-color: #ffc900;" text="Join Team">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -72,6 +74,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                  <Label fx:id="joinLabel" layoutX="425.0" layoutY="575.0" text="Already Joined" textFill="#ffc900">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
                </children>
                <cursor>
                   <Cursor fx:constant="HAND" />

@@ -77,25 +77,29 @@ public class UserProfileController {
         TableColumn<Events, String> eventDetailColumn = new TableColumn<>("Event Detail");
         eventDetailColumn.setCellValueFactory(new PropertyValueFactory<>("eventDetail"));
 
-        TableColumn<Events, String> eventDateColumn = new TableColumn<>("Event Day");
-        eventDateColumn.setCellValueFactory(new PropertyValueFactory<>("startDate"));
-
         TableColumn<Events, String> seatAvailableColumn = new TableColumn<>("Available Seat");
         seatAvailableColumn.setCellValueFactory(new PropertyValueFactory<>("availableSeat"));
+
+        TableColumn<Events, String> statusColumn = new TableColumn<>("Status");
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         myEventTableview.getColumns().clear();
         myEventTableview.getColumns().add(eventNameColumn);
         myEventTableview.getColumns().add(eventDetailColumn);
-        myEventTableview.getColumns().add(eventDateColumn);
         myEventTableview.getColumns().add(seatAvailableColumn);
+        myEventTableview.getColumns().add(statusColumn);
 
         myEventTableview.getItems().clear();
 
-        for(Events events: eventsList.getEvents()){
-            if (events.getEventCreatorUsername().equals(currentUser)){
+        for (Events events : eventsList.getEvents()) {
+            if (events.getStatus().equals("active")) {
                 myEventTableview.getItems().add(events);
             }
-
+        }
+        for (Events events : eventsList.getEvents()) {
+            if (events.getStatus().equals("finish")) {
+                myEventTableview.getItems().add(events);
+            }
         }
 
     }

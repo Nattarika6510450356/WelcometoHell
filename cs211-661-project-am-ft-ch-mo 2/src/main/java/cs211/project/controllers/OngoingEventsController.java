@@ -86,12 +86,6 @@ public class OngoingEventsController {
         TableColumn<Events, String> eventNameColumn = new TableColumn<>("Event Name");
         eventNameColumn.setCellValueFactory(new PropertyValueFactory<>("eventName"));
 
-        TableColumn<Events, String> eventDetailColumn = new TableColumn<>("Event Detail");
-        eventDetailColumn.setCellValueFactory(new PropertyValueFactory<>("eventDetail"));
-
-        TableColumn<Events, String> eventDateColumn = new TableColumn<>("Event Day");
-        eventDateColumn.setCellValueFactory(new PropertyValueFactory<>("startDate"));
-
         TableColumn<Events, String> seatAvailableColumn = new TableColumn<>("Seat Available");
         seatAvailableColumn.setCellValueFactory(new PropertyValueFactory<>("availableSeat"));
 
@@ -101,8 +95,6 @@ public class OngoingEventsController {
         eventsTableView.getColumns().clear();
         eventsTableView.getColumns().add(eventImageColumn);
         eventsTableView.getColumns().add(eventNameColumn);
-        eventsTableView.getColumns().add(eventDetailColumn);
-        eventsTableView.getColumns().add(eventDateColumn);
         eventsTableView.getColumns().add(seatAvailableColumn);
         eventsTableView.getColumns().add(statusColumn);
         eventsTableView.getItems().clear();
@@ -111,12 +103,20 @@ public class OngoingEventsController {
             LocalDate finishDate = LocalDate.parse(events.getFinishDate());
             if (finishDate.isBefore(LocalDate.now())) {
                 events.setStatus("finish");
-                eventsList.addNewEvent(events.getEventName(), events.getEventDetail(), events.getMaxSeat(), events.getAvailableSeat(), events.getStartDate(), events.getFinishDate(), events.getEventImagePath(), events.getEventCreatorUsername(), events.getStatus());
-                datasource.writeData(eventsList);
+            } else {
+                events.setStatus("active");
             }
+            eventsList.addNewEvent(events.getEventName(), events.getEventDetail(), events.getMaxSeat(), events.getAvailableSeat(), events.getStartDate(), events.getFinishDate(), events.getEventImagePath(), events.getEventCreatorUsername(), events.getStatus());
+            datasource.writeData(eventsList);
         }
         for (Events events : eventsList.getEvents()) {
             if (events.getStatus().equals("active")) {
+                eventsTableView.getItems().add(events);
+                eventsObservableList.add(events);
+            }
+        }
+        for (Events events : eventsList.getEvents()) {
+            if (events.getStatus().equals("finish")) {
                 eventsTableView.getItems().add(events);
                 eventsObservableList.add(events);
             }

@@ -33,9 +33,11 @@ public class HelloApplication extends Application {
         FXRouter.when("admin-change-password", resourcesPath + "admin-change-password-view.fxml");
         FXRouter.when("create-schedule", resourcesPath + "create-event-schedule-view.fxml");
         FXRouter.when("event-schedule", resourcesPath + "event-schedule-view.fxml");
+        FXRouter.when("event-schedule2", resourcesPath + "event-schedule-2-view.fxml");
         FXRouter.when("edit-schedule", resourcesPath + "edit-event-schedule-view.fxml");
         FXRouter.when("team-detail", resourcesPath + "team-view.fxml");
         FXRouter.when("team-table", resourcesPath + "team-schedule-view.fxml");
+        FXRouter.when("team-table2", resourcesPath + "team-schedule-2-view.fxml");
         FXRouter.when("add-team", resourcesPath + "create-team-schedule-view.fxml");
         FXRouter.when("event-manage-user", resourcesPath + "event-manage-user-view.fxml");
         FXRouter.when("edit-team-schedule", resourcesPath + "edit-team-schedule-view.fxml");

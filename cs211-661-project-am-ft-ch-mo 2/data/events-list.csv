@@ -1,13 +1,14 @@
-Event Mockup,Hello Test Test,5,2,2023-09-07,2023-09-08,images/event/2023-09-15_1694796629080.jpg,user1,finish
+event mockup,event,123,1,2023-10-01,2023-10-06,images/event/2023-09-15_1694796629080.jpg,user1,active
 event2,123,4,2,2023-09-14,2023-09-20,images/event/2023-09-14_1694705789017.png,user1,finish
 eventt,detail,3,1,2023-09-15,2023-09-23,images/event/2023-09-15_1694749837354.png,user2,finish
 event5,detail,10,9,2023-09-15,2023-09-22,images/event/2023-09-15_1694752039290.jpg,user1,finish
 tomato,eat eat,10,8,2023-09-17,2023-09-28,images/event/2023-09-15_1694762848897.png,user1,finish
 suger suger rune,eiei,3,0,2023-09-16,2023-09-23,images/event/2023-09-16_1694797624757.jpg,user1,finish
-castle,kiki,5,5,2023-09-16,2023-09-23,images/event/2023-09-16_1694797861403.png,user1,finish
+castle,kiki,5,4,2023-10-01,2023-10-28,images/event/2023-09-16_1694797861403.png,user1,active
 rice,ff,7,6,2023-09-09,2023-09-23,images/event/2023-09-16_1694798285277.jpg,user1,finish
 ??????????,????????,123,121,2023-09-07,2023-09-15,/events/samplePic.png,user1,finish
 nn,nnnn,12,0,2023-09-18,2023-09-25,/events/samplePic.png,user1,finish
 hi,hello,2,0,2023-09-06,2023-09-30,images/event/samplePic.png,user1,finish
 event mockup10000,detaill,123123123,123123123,2023-09-26,2023-09-30,images/event/2023-09-27_1695810903732.JPG,user1,finish
 new event,123123123,10,3,2023-09-30,2023-10-03,images/event/samplePic.png,test,finish
+event test image,jfjfjfjfjjf,12,12,2023-10-03,2023-10-06,images/event/2023-10-04_1696435495862.png,user1,active
