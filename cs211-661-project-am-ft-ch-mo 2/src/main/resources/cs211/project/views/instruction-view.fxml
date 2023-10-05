@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.InstructionController">
+   <children>
+      <Label layoutX="442.0" layoutY="26.0" text="คำแนะนำ" textFill="#ffc900">
+         <font>
+            <Font name="Krungthep" size="36.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="45.0" layoutY="93.0" prefHeight="573.0" prefWidth="922.0" style="-fx-background-color: #ffc900;">
+         <children>
+            <Label layoutX="16.0" layoutY="14.0" text="การค้นหาอีเวนต์">
+               <font>
+                  <Font name="Krungthep" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="50.0" prefHeight="17.0" prefWidth="521.0" text="-ผู้ใช้สามารถค้นหาชื่อกิจกรรมที่สนใจได้จากแถบค้นหา">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="74.0" prefHeight="20.0" prefWidth="756.0" text="-หากต้องการกำหนดขอบเขตของพื้นที่สามารถกดเลือกฟีเจอร์ที่อยู่ด้านล่างแถบค้นหาเพื่อเลือกหมวดหมู่ที่ต้องการได้">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="111.0" text="การเข้าร่วมอีเวนต์">
+               <font>
+                  <Font name="Krungthep" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="146.0" prefHeight="17.0" prefWidth="560.0" text="-ผู้ใช้สามารถเข้าร่วมกิจกรรมได้ที่ปุ่ม “สนใจสมัครเข้าร่วม” ผ่านหน้าของกิจกรรมนั้นๆ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="174.0" prefHeight="20.0" prefWidth="740.0" text="-หากกดยืนยันการจองแล้ว ผู้ใช้จะต้องรอให้ผู้จัดกิจกรรมอนุมัติก่อนจึงจะถือว่าสามารถเข้าร่วมกิจกรรมนั้นๆได้">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="202.0" prefHeight="17.0" prefWidth="661.0" text="-ผู้จัดกิจกรรมสามารถยกเลิกสิทธิ์การเข้าร่วมกิจกรรมของผู้ใช้ได้">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="241.0" text="การสร้างอีเวนต์">
+               <font>
+                  <Font name="Krungthep" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="278.0" prefHeight="17.0" prefWidth="661.0" text="-ผู้ใช้สามารถสร้างกิจกรรมของตนเองได้ที่เมนู “จัดอีเวนต์ของคุณ”">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="305.0" prefHeight="17.0" prefWidth="661.0" text="-สามารถกำหนดจำนวนผู้เข้าร่วมกิจกรรม และทีมอาสาสมัครร่วมจัดอีเวนต์ได้ตามต้องการ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="332.0" prefHeight="17.0" prefWidth="661.0" text="-หากมีผู้สมัครหรือทีมอาสาขอเข้าร่วมกิจกรรมผู้จัดกิจกรรมจะต้องพิจารณากดอนุมัติ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="360.0" prefHeight="17.0" prefWidth="661.0" text="-สามารถกดตัดสินสิทธิ์การเข้าร่วมกิจกรรมของผู้สมัคร หรือทีมอาสาได้">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="399.0" prefHeight="24.0" prefWidth="267.0" text="การอาสาเข้าร่วมอีเวนต์">
+               <font>
+                  <Font name="Krungthep" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="434.0" prefHeight="17.0" prefWidth="661.0" text="-ผู้ใช้สามารถร่วมเป็นทีมอาสาสมัครได้ที่ปุ่ม “สนใจเป็นทีมอาสาสมัคร” ผ่านหน้าของกิจกรรมนั้นๆ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="463.0" prefHeight="17.0" prefWidth="661.0" text="-จะต้องกำหนดชื่อทีมและจำนวนคนในทีมอย่างชัดเจน">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="492.0" prefHeight="19.0" prefWidth="758.0" text="-หากทำการสมัครเรียบร้อยแล้ว ทีมอาสาจะต้องรอให้ผู้จัดกิจกรรมอนุมัติก่อนจึงจะถือว่าสามารถเข้าร่วมกิจกรรมนั้นๆได้">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="524.0" prefHeight="17.0" prefWidth="661.0" text="-ผู้จัดกิจกรรมสามารถยกเลิกสิทธิ์การเข้าร่วมกิจกรรมของทีมอาสาสมัครได้">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="477.0" layoutY="696.0" mnemonicParsing="false" onAction="#backtoLoginBtn" style="-fx-background-color: #ffc900;" text="Back">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
